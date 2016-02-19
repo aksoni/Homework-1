@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="FINISH"
         android:id="@+id/button2"
-        android:onClick="onClickNext"
+        android:onClick="onClickFinish"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"/>

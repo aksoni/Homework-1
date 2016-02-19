@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="SUBMIT"
             android:id="@+id/button2"
-            android:onClick="onClickNext"
+            android:onClick="onClickSubmit"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true">
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/year_submission"
             android:layout_below="@+id/imagequestion"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
