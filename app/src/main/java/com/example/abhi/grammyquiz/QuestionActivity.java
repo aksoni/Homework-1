@@ -1,5 +1,7 @@
 package com.example.abhi.grammyquiz;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,10 +18,26 @@ public class QuestionActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_question);
 
+        getFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, QuestionFragment.newInstance())
+                .addToBackStack(null)
+                .commit();
 
 
     }
 
+    public void onClickNext (View view)
+    {
+        getFragmentManager().popBackStack();
+        getFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, ImageFragment.newInstance())
+                .addToBackStack(null)
+                .commit();
+    }
+
     Intent intent = getIntent();
+
 
 }
