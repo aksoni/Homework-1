@@ -26,8 +26,7 @@ public class ResultsActivity extends AppCompatActivity {
 
     public void onClickRestart (View view)
     {
-        Intent i = getBaseContext().getPackageManager()
-                .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        Intent i = new Intent(this, MainActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }
