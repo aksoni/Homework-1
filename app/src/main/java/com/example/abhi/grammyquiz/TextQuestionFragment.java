@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class QuestionFragment extends Fragment {
+public class TextQuestionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -15,12 +15,12 @@ public class QuestionFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_text, container, false);
     }
 
-    public static QuestionFragment newInstance() {
-        QuestionFragment fragment = new QuestionFragment();
+    public static TextQuestionFragment newInstance() {
+        TextQuestionFragment fragment = new TextQuestionFragment();
         return fragment;
     }
 
-    public QuestionFragment() {
+    public TextQuestionFragment() {
         // Required empty public constructor
     }
 }

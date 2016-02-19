@@ -1,17 +1,64 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.abhi.grammyquiz.QuestionFragment"
+    tools:context="com.example.abhi.grammyquiz.TextQuestionFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-<LinearLayout
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Question Goes Here"
+        android:text="Which artist won the Grammy Album of the Year Award in 1978 for Rumours?"
         android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <RadioButton android:id="@+id/paul_simon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paul Simon"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/marvin_gaye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stevie Wonder"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/pink_floyd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pink Floyd"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/fleetwood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fleetwood Mac"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FINISH"
+        android:id="@+id/button2"
+        android:onClick="onClickNext"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
+
+
+
+
+</RelativeLayout>
 </FrameLayout>

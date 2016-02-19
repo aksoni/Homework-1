@@ -20,7 +20,7 @@ public class QuestionActivity extends AppCompatActivity {
 
         getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragment_container, QuestionFragment.newInstance())
+                .replace(R.id.fragment_container, TextQuestionFragment.newInstance())
                 .addToBackStack(null)
                 .commit();
 
@@ -32,7 +32,7 @@ public class QuestionActivity extends AppCompatActivity {
         getFragmentManager().popBackStack();
         getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragment_container, ImageFragment.newInstance())
+                .replace(R.id.fragment_container, ImageQuestionFragment.newInstance())
                 .addToBackStack(null)
                 .commit();
     }
