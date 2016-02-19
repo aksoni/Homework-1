@@ -26,13 +26,14 @@ public class ResultsActivity extends AppCompatActivity {
 
     public void onClickRestart (View view)
     {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Intent i = getBaseContext().getPackageManager()
+                .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
     }
 
     public void onClickQuit (View view)
     {
-        Intent intent = new Intent(this, ResultsActivity.class);
-        startActivity(intent);
+        this.finishAffinity();
     }
 }
