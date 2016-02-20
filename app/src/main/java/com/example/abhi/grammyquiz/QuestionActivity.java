@@ -14,6 +14,7 @@ import android.widget.RadioButton;
 
 public class QuestionActivity extends AppCompatActivity {
 
+    //Strings to display results to user
     static String result1 = null;
     static String result2 = null;
 
@@ -32,6 +33,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     }
 
+    //Method to check user's answer for text based question
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -40,15 +42,15 @@ public class QuestionActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.paul_simon:
                 if (checked)
-                    result2 = "Incorrect. The correct answer was Fleetwood Mac.";
+                    result2 = "Incorrect.";
                     break;
             case R.id.marvin_gaye:
                 if (checked)
-                    result2 = "Incorrect. The correct answer was Fleetwood Mac.";
+                    result2 = "Incorrect.";
                     break;
             case R.id.pink_floyd:
                 if (checked)
-                    result2 = "Incorrect. The correct answer was Fleetwood Mac.";
+                    result2 = "Incorrect.";
                     break;
             case R.id.fleetwood:
                 if (checked)
@@ -57,18 +59,19 @@ public class QuestionActivity extends AppCompatActivity {
         }
     }
 
+    //Method to check user's answer for image based question, remove image fragment, and add text fragment
     public void onClickSubmit (View view)
     {
         EditText editText = (EditText) findViewById(R.id.year_submission);
         String message = editText.getText().toString();
 
-        if(message.equals("1974")==true)
+        if(message.equals("1974"))
         {
             result1 = "Correct!";
         }
         else
         {
-            result1 = "Incorrect. The correct answer was 1974.";
+            result1 = "Incorrect.";
         }
 
         getFragmentManager().popBackStack();
@@ -77,18 +80,16 @@ public class QuestionActivity extends AppCompatActivity {
                 .replace(R.id.fragment_container, TextQuestionFragment.newInstance())
                 .addToBackStack(null)
                 .commit();
-
-
     }
 
+    //Method to go to results screen after text based question
     public void onClickFinish (View view)
     {
         Intent intent = new Intent(this, ResultsActivity.class);
         startActivity(intent);
     }
 
-    Intent intent = getIntent();
-
+    //Getter methods for String results of quiz
     public static String getResult1()
     {
         return result1;

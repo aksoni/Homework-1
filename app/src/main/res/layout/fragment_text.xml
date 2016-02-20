@@ -14,10 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Which artist won the Grammy Award for Album of the Year in 1978 for Rumours?"
+        android:text="@string/text_question"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:gravity="center"/>
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
@@ -28,29 +29,29 @@
         <RadioButton android:id="@+id/paul_simon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Paul Simon"
+            android:text="@string/choice_1"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/marvin_gaye"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stevie Wonder"
+            android:text="@string/choice_2"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/pink_floyd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pink Floyd"
+            android:text="@string/choice_3"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/fleetwood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fleetwood Mac"
+            android:text="@string/choice_4"
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FINISH"
+        android:text="@string/finish_button"
         android:id="@+id/button2"
         android:onClick="onClickFinish"
         android:layout_alignParentBottom="true"

@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="RESULTS"
+        android:text="@string/results_header"
         android:id="@+id/header"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -28,7 +28,7 @@
         >
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/names"
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -37,20 +37,16 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Restart"
+            android:text="@string/restart_button"
             android:id="@+id/Restart"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
             android:layout_weight="50"
             android:onClick="onClickRestart"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quit"
+            android:text="@string/quit_button"
             android:id="@+id/button4"
-            android:layout_alignBottom="@+id/button3"
-            android:layout_toEndOf="@+id/button3"
             android:layout_weight="50"
             android:onClick="onClickQuit"/>
 

@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Grammy Quiz</string>
+    <string name="play_button">PLAY!</string>
     <string name="title_activity_question">QuestionActivity</string>
+    <string name="image_question">What year did this album win the Grammy Award for Album of the Year?</string>
+    <string name="submit_button">SUBMIT ANSWER</string>
+    <string name="text_question">Which artist won the Grammy Award for Album of the Year in 1978 for Rumours?</string>
+    <string name="choice_1">Paul Simon</string>
+    <string name="choice_2">Marvin Gaye</string>
+    <string name="choice_3">Pink Floyd</string>
+    <string name="choice_4">Fleetwood Mac</string>
+    <string name="finish_button">FINISH QUIZ</string>
     <string name="title_activity_results">ResultsActivity</string>
+    <string name="results_header">QUIZ RESULTS</string>
+    <string name="restart_button">RESTART</string>
+    <string name="quit_button">QUIT</string>
 </resources>

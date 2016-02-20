@@ -18,15 +18,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="What year did this album win the Grammy Award for Album of the Year?"
+            android:text="@string/image_question"
             android:id="@+id/imagequestion"
             android:layout_below="@+id/innervisions"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SUBMIT"
-            android:id="@+id/button2"
+            android:text="@string/submit_button"
+            android:id="@+id/submit_button"
             android:onClick="onClickSubmit"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"

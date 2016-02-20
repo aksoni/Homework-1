@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //Method to start question activity after pressing Play
     public void onClickPlay (View view)
     {
         Intent intent = new Intent(this, QuestionActivity.class);

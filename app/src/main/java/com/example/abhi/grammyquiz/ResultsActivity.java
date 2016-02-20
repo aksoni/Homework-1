@@ -15,6 +15,7 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
+        //Display result TextViews dynamically
         LinearLayout layout=(LinearLayout)findViewById(R.id.answers);
         TextView result1 = new TextView(this);
         result1.setText("Question 1: " + QuestionActivity.getResult1());
@@ -24,6 +25,7 @@ public class ResultsActivity extends AppCompatActivity {
         layout.addView(result2);
     }
 
+    //Method to start app from beginning after pressing Restart button
     public void onClickRestart (View view)
     {
         Intent i = new Intent(this, MainActivity.class);
@@ -31,6 +33,7 @@ public class ResultsActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    //Method to close app after pressing Quit Button
     public void onClickQuit (View view)
     {
         this.finishAffinity();
